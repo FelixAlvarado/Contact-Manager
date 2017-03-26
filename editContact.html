@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+    <!--navigation bar -->
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="addContact.html">Add Contact</a></li>
+          <li class="active"><a href="editContact.html">Edit Contact</a></li>
+            <li><a href="deleteContact.html">Delete Contact</a></li>
+          </ul>
+        </nav>
+          <div class="container-fluid">
+            <!-- name input-->
+            <h1>Edit Contacts</h1>
+            <form id="contactEditCenter">
+              <div class="form-group">
+              <label>Put in the contact Name:</label>
+            <input id="nameEdit" type="search"/>
+          <button id="searchEdit" type="button" class="btn btn-primary">Search</button>
+            </div>
+            </form>
+
+            <!-- modal for putting in changes of contact-->
+
+            <div id="showEditSearch" class="modal fade">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                          <h4 class="modal-title">Contact</h4>
+                        </div>
+                        <div class="modal-body">
+                      <div id="editResult"></div>
+                      <div>
+
+                      <form>
+                        <div class="form-group">
+                      <p> <label>Name:</label>
+                      <input id="nameEdit" type="text"/></p>
+
+                    <p> <label>Number:</label>
+                    <input id="numberEdit" type="text" placeholder="xxx-xxx-xxxx" /></p>
+                  <p>  <label>Email Address:</label>
+                  <input id="emailEdit" type="email" placeholder="Include full domain" />
+</p>
+                      </div>
+                      </form>
+                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="editContact" class="btn btn-primary" data-dismiss="modal">Edit Contact</button>
+                          <button type="button" id="closeEdit" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+        <!--no existing contact modal-->
+        <div id="errorEdit" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                      <h4 class="modal-title">Error!</h4>
+                    </div>
+                    <div class="modal-body">
+                  <p> That is not an existing contact!</P>
+  </div>
+                    <div class="modal-footer">
+                      <button type="button" id="closeErrorEdit" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- modal for incorrect input-->
+              <div id="errorEditInput" class="modal fade">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                            <h4 class="modal-title">Error!</h4>
+                          </div>
+                          <div class="modal-body">
+                        <p> Please make sure that all fields are in the proper format!</P>
+        </div>
+                          <div class="modal-footer">
+                            <button type="button" id="wrongErrorEdit" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+      <!-- confirming contact has been edited-->
+      <div id="confirmEdit" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" >&times;</button>
+
+                  </div>
+                  <div class="modal-body">
+                <p> Contact has been Edited!</P>
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" id="closeConfirmEdit" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+</div>
+    <script src="editContact.js"></script>
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

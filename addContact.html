@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+    <!-- nav bar -->
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li><a href="home.html">Home</a></li>
+    <li class="active"><a href="addContact.html">Add Contact</a></li>
+      <li><a href="editContact.html">Edit Contact</a></li>
+        <li><a href="deleteContact.html">Delete Contact</a></li>
+      </ul>
+    </nav>
+      <div class="container-fluid">
+        <!--add contact form -->
+      <h1>Add Contact</h1>
+      <form id="contactAddition">
+        <div class="form-group">
+        <label>Name:</label>
+      <input id="nameSave" type="text"/>
+      <label>Number:</label>
+    <input id="numberSave" type="text" placeholder="xxx-xxx-xxxx" />
+    <label>Email Address:</label>
+  <input id="emailSave" type="email" placeholder="Include full domain" />
+    <button id="addContact" type="button" class="btn btn-primary">Add Contact</button>
+      </div>
+      </form>
+      <!-- modal for showing error-->
+      <div id="errorMessage" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                    <h4 class="modal-title">Error!</h4>
+                  </div>
+                  <div class="modal-body">
+                <p> Make sure that all fields are filled correctly</P>
+</div>
+                  <div class="modal-footer">
+                    <button type="button" id="closeError" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+  <!--modal for showing contact is added -->
+  <div id="confirmMessage" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+
+              </div>
+              <div class="modal-body">
+            <p> Contact has been added!</P>
+            </div>
+              <div class="modal-footer">
+                <button type="button" id="closeConfirm" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+</div>
+    <script src="addContact.js"></script>
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

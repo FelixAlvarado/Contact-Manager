@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+    <!-- nav bar -->
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="home.html">Home</a></li>
+    <li><a href="addContact.html">Add Contact</a></li>
+      <li><a href="editContact.html">Edit Contact</a></li>
+        <li><a href="deleteContact.html">Delete Contact</a></li>
+      </ul>
+    </nav>
+<div class="container-fluid">
+    <!--input box for searched content-->
+    <h1>Contacts</h1>
+    <form id="searchDiv">
+      <div class="form-group">
+      <label>Search by Name:</label>
+    <input id="nameInput" type="search"/>
+  <button id="searchInfo" type="button" class="btn btn-primary">Search</button>
+    </div>
+    </form>
+
+    <!--modal dialog to show searched content-->
+    <div id="showSearched" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                  <h4 class="modal-title">Contact</h4>
+                </div>
+                <div class="modal-body">
+              <div id="searchResult"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="closeSearch" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+<!--table that shows list of content-->
+<table class="table table-striped">
+  <th> Name </th>
+  <th> Number</th>
+  <th>  Email </th>
+  <tbody id="homeTable"></tbody>
+</table>
+</div>
+
+<script src="home.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>

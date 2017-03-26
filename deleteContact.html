@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete Contact</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+    <!--navigation bar -->
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="addContact.html">Add Contact</a></li>
+          <li><a href="editContact.html">Edit Contact</a></li>
+            <li class="active"><a href="deleteContact.html">Delete Contact</a></li>
+          </ul>
+        </nav>
+          <div class="container-fluid">
+            <!-- name input-->
+            <h1>Delete Contacts</h1>
+            <form id="deleteCenter">
+              <div class="form-group">
+              <label>Put in the contact Name:</label>
+            <input id="nameDelete" type="search"/>
+          <button id="searchDelete" type="button" class="btn btn-primary">Delete</button>
+            </div>
+            </form>
+
+  <!--delete confirm-->
+  <div id="confirmDelete" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                <h4 class="modal-title">Delete Contact</h4>
+              </div>
+              <div class="modal-body">
+            <p> Are you sure you want to delete this contact?</P>
+                <div id="deleteResult"></div>
+</div>
+              <div class="modal-footer">
+                <button type="button" id="deleteContact" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button type="button" id="closeDeleteConfirm" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  <!--error message-->
+  <div id="errorDelete" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+                <h4 class="modal-title">Error!</h4>
+              </div>
+              <div class="modal-body">
+            <p> That is not an existing contact!</P>
+</div>
+              <div class="modal-footer">
+                <button type="button" id="closeErrorDelete" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <!--delete happend-->
+  <div id="deleteHappen" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+
+              </div>
+              <div class="modal-body">
+            <p> Contact has been Deleted!</P>
+            </div>
+              <div class="modal-footer">
+                <button type="button" id="deleteHappenedPress" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+</div>
+    <script src="deleteContact.js"></script>
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
